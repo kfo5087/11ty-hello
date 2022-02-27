@@ -1,0 +1,41 @@
+<p>Before starting this class I had a minuscule amount of exposure to web development, JavaScript, and HTML. After this lab I can now confidently say that investing in a device that uses a Linux platform is the wave for anybody pursuing a career in web development.</p>
+<h2>SOFTWARE REQUIRED</h2>
+<p>Before starting anything, if you are on windows, I highly recommend installing the Windows Terminal found in the Microsoft store, it's a free application that will allow you to add a Linux distro and access its terminal freely. The reason to do this is because &quot;ohmyzsh&quot; doesn't like windows users and makes you jump through multiple loopholes to get it working correctly on your bill gates powered OS.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hrge09gdx57fgwyjt07f.png" alt="Image description"></p>
+<p>When setting up this terminal, the first step you must take is by enabling &quot;Windows subsystems for Linux&quot; found in &quot;Windows Features&quot; (This can be found in your computers search bar) After this install a Linux distro such as Ubuntu
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/k4gp0ujmhsuoo2slz7s2.png" alt="Image description">
+add it to your terminal (may require restarting both programs) and enjoy the benefits of having your Linux terminal run through windows such as</p>
+<ol>
+<li>The ability to now copy and paste without an external program</li>
+<li>Ohmyzsh now works by copy and pasting the link to install from the website into your terminal</li>
+</ol>
+<p><strong>NODE.js</strong>
+Node.js is an &quot;asynchronous event JavaScript runtime&quot; and its basic functionality is to allow users to build and develop scalable network applications.
+<strong>NPM</strong>
+NPM is a package manager that comes installed with Node.js that enables a user to discover, install, and use node programs.</p>
+<p><img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5tqb8868cjfl2itlzwds.PNG" alt="Image description"> What it should look like when these programs are properly installed.</p>
+<h2>The Lab</h2>
+<p>Once all the required components are installed to your system, you can proceed with the lab</p>
+<ol>
+<li>Proceed to create and open a new folder using the <code>mkdir</code> command and <code>cd</code> command respectively</li>
+<li>Run the command <code>npm init @open-wc </code> and if all the previous steps were done correctly, the prompt for open web components will pop up.</li>
+<li>Select all of the options using &quot;a&quot;, don't use typescript, and tag your web component as hello world. Install your dependencies with either Yarn or NPM and the you will be given a new pop up in browser.
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ff6m9z64q3lfzqfckgl6.png" alt="Image description"></li>
+<li>The page you will be taken to willbe a mianly blank page with hello world at the top and a button that lets you increment the number <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uarml3j5ouqnqw29mlwt.png" alt="Image description"></li>
+</ol>
+<p>Congratulations you have created your very own web component.</p>
+<h2>What is an API?</h2>
+<p>An API (Application Programming Interface) is a software that allows for connections between computers and computer programs. For this project we took advantage of Wikipedia's API's.</p>
+<h2>Fetch</h2>
+<p><code>fetch</code> is a method in JavaScript that is used to request resources in the form of HTTP from a webpage. Shown below is an example of <code>fetch</code> being used to communicate with Wikipedia. A request is sent out with a resulting JSON response.
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t72e2a77b8gu6t7r528m.png" alt="Image description"></p>
+<h2>Wikipedia API</h2>
+<p>Before starting with Wikipedia api, make sure to import the necessary packages by adding this line of code to the top
+<code>import '@lrnwebcomponents/wikipedia-query/wikipedia-query.js';</code></p>
+<p>Wikipedia has a numerous amount of functions that can be referenced <a href="https://en.wikipedia.org/w/api.php">here</a>. This API allows users to connect to Wikipedia and manage different functions. With this lab we are dealing with the query function and it is accessed by using the tag <code>wikipedia-query</code>, it uses <code>fetch</code> to search for the necessary parameters.</p>
+<pre><code>&lt;wikipedia-query search=&quot;${this.city}, ${this.state}&quot;&gt;&lt;/wikipedia-query&gt;
+      &lt;wikipedia-query search=&quot;${this.city}&quot;&gt;&lt;/wikipedia-query&gt;
+      &lt;wikipedia-query search=&quot;${this.state}&quot;&gt;&lt;/wikipedia-query&gt;
+</code></pre>
+<p>The above block of code is three query's that get parameters filling out the state and city, the city alone, and the state alone. They were gained earlier in conjunction with the freegeoip app.</p>
+<p>In all, API's are a useful tool that allow for coders to do less coding. Provided is my GitHub <a href="https://github.com/kfo5087/ip-project/tree/master/src">repository</a></p>
